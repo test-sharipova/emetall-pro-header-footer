@@ -98,7 +98,7 @@ document.querySelectorAll('.navigation button').forEach(button => {
             left: scrollToPosition,
             behavior: 'smooth' // Плавная прокрутка
         });
-
+      
         // Удаляем класс active у всех кнопок
         document.querySelectorAll('.navigation button').forEach(btn => {
             btn.classList.remove('active');

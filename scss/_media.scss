@@ -29,7 +29,7 @@
     
     .pro-options {
         &__item {
-            padding: 16px;
+            padding: 20px;
             .pro-btn_white, .pro-btn_transparent {
                 padding-inline: 8px;
                 text-align: center;
@@ -188,14 +188,31 @@
     }
     
     .pro-options {
+        scroll-behavior: smooth;
+        padding: 65px 0 30px;
         .pro-title {
             text-align: center;
         }
-        scroll-behavior: smooth;
-        padding: 65px 0 30px;
+        &__subtitle {
+            margin-top: 11px;
+            font-size: 14px;
+            line-height: 157%;
+            color: #bfbfbf;
+            min-height: auto;
+        }
+        &__price {
+            margin-top: 16px;
+        }
+        &__list {
+            margin-top: 34px;
+            &__item {
+                font-size: 14px;
+                line-height: 157%;
+            }
+        }
         &__wrapper {
-            
-            gap: 16px;
+            margin-top: 24px;
+            gap: 12px;
             display: flex;
             align-items: stretch;
             overflow-x: auto;
@@ -209,18 +226,21 @@
         }
         &__item {
             min-height: auto;
-            min-width: calc(100vw - 64px);
+            min-width: calc(100vw - 48px);
             scroll-snap-align: start;
             
-            // &-accent {
-            //     order: 1;
-            // }
-            // &:first-child {
-            //     order: 2;
-            // }
-            // &:nth-child(3) {
-            //     order: 3;
-            // }
+            &-accent {
+                order: 1;
+                .pro-options__subtitle {
+                    margin-top: 11px;
+                }
+            }
+            &:first-child {
+                order: 2;
+            }
+            &:nth-child(3) {
+                order: 3;
+            }
         }
         &__nav {
             display: flex;
