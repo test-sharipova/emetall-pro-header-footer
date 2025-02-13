@@ -177,8 +177,8 @@
         <section class="pro-rew">
             <div class="container">
                 <h2 class="pro-title">Отзывы пользователей</h2>
-                <ul class="pro-wins__wrapper">
-                    <li class="pro-wins__item">
+                <ul class="pro-wins__wrapper elements">
+                    <li class="pro-wins__item element" data-index="0">
                         <p class="pro-rew__name">МеталлИнвест</p>
                         <div class="pro-rew__stars">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -202,8 +202,8 @@
                         </p>
                         <p class="pro-rew__date">7 февраля</p>
                     </li>
-                    <li class="pro-wins__item">
-                        <p class="pro-rew__name">МеталлИнвест</p>
+                    <li class="pro-wins__item element" data-index="1">
+                        <p class="pro-rew__name">МеталлТорг</p>
                         <div class="pro-rew__stars">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.6816 4.28275L7.99257 3.71925L6.33907 0.19725C6.21557 -0.06575 5.78407 -0.06575 5.66057 0.19725L4.00757 3.71925L0.318575 4.28275C0.0155746 4.32925 -0.105425 4.69775 0.107075 4.91525L2.78707 7.66225L2.15357 11.5458C2.10307 11.8543 2.43257 12.0857 2.70507 11.9342L6.00007 10.1133L9.29507 11.9348C9.56507 12.0848 9.89757 11.8577 9.84657 11.5463L9.21307 7.66275L11.8931 4.91575C12.1056 4.69775 11.9841 4.32925 11.6816 4.28275Z" fill="white" />
@@ -226,8 +226,8 @@
                         </p>
                         <p class="pro-rew__date">7 февраля</p>
                     </li>
-                    <li class="pro-wins__item">
-                        <p class="pro-rew__name">МеталлИнвест</p>
+                    <li class="pro-wins__item element" data-index="2">
+                        <p class="pro-rew__name">Сибнефтемаш</p>
                         <div class="pro-rew__stars">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.6816 4.28275L7.99257 3.71925L6.33907 0.19725C6.21557 -0.06575 5.78407 -0.06575 5.66057 0.19725L4.00757 3.71925L0.318575 4.28275C0.0155746 4.32925 -0.105425 4.69775 0.107075 4.91525L2.78707 7.66225L2.15357 11.5458C2.10307 11.8543 2.43257 12.0857 2.70507 11.9342L6.00007 10.1133L9.29507 11.9348C9.56507 12.0848 9.89757 11.8577 9.84657 11.5463L9.21307 7.66275L11.8931 4.91575C12.1056 4.69775 11.9841 4.32925 11.6816 4.28275Z" fill="white" />
@@ -436,6 +436,19 @@
                 </div>
             </div>
         </section>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <button type="button" class="popup-close" id="close"><img src="img/popup-close.svg" alt="закрыть" width="16" height="16"></button>
+            <h2 id="popup-title"></h2>
+            <div id="popup-description">
+
+            </div>
+            <div class="popup__buttons__wrap">
+                <button id="prev" class="nav-button" type="button"></button>
+                <button id="next" class="nav-button" type="button"></button>
+            </div>
+        </div>
     </div>
     <script src="js/imask.js"></script>
     <script src="js/script.js"></script>
