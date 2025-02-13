@@ -81,6 +81,25 @@
         }
     }
     .pro-wins {
+        .pro-title {
+            display: block;
+            max-width: 90%;
+            span {
+                display: inline;
+                img {
+                    display: none;
+
+                }
+                span {
+                    color: #070a23;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    padding-inline: 6px;
+                    font-size: 17px;
+                    display: inline;
+                }
+            }
+        }
         padding: 30px 0;
         &__text {
             font-size: 16px;
