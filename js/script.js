@@ -83,3 +83,6 @@ function navigate(direction) {
     
     showPopup(currentIndex);
 }
+
+//pro-options
+

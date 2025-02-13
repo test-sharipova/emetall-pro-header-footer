@@ -18,9 +18,12 @@
             <div class="container">
                 <div class="pro-promo__wrapper">
                     <div class="pro-promo__content">
-                        <a href="#" class="logo">
+                        <a href="#" class="pro-logo">
                             <img src="img/logo.svg" alt="" width="271" height="54">
                         </a>
+                        <!-- <div class="pro-promo__img-mobile">
+                            <img src="img/promo-img-mob.png" alt="">
+                        </div> -->
                         <h1 class="pro-promo__title">
                             Больше поставщиков&nbsp;&mdash; больше выгодных предложений
                         </h1>
@@ -259,8 +262,13 @@
                 <h2 class="pro-title">
                     Варианты подписок
                 </h2>
+                <!-- <div class="pro-options__nav">
+                    <a href="#pro" class="pro-options__nav-link">Про</a>
+                    <a href="#proplus" class="pro-options__nav-link">Про плюс</a>
+                    <a href="#none" class="pro-options__nav-link">без</a>
+                </div> -->
                 <ul class="pro-options__wrapper">
-                    <li class="pro-options__item">
+                    <li class="pro-options__item" id="none">
                         <p class="pro-options__title">
                             Без подписки
                         </p>
@@ -286,7 +294,7 @@
                             <li class="pro-options__list__item pro-options__list__item-cross">Приоритетная техподдержка</li>
                         </ul>
                     </li>
-                    <li class="pro-options__item pro-options__item-accent">
+                    <li class="pro-options__item pro-options__item-accent" id="pro">
                         <p class="pro-options__title">
                             <img src="img/pro.svg" alt="" width="54" height="34">
                         </p>
@@ -317,7 +325,7 @@
                         </ul>
                         <a href="#" class="pro-btn_white">Попробовать 30 дней бесплатно</a>
                     </li>
-                    <li class="pro-options__item">
+                    <li class="pro-options__item" id="proplus">
                         <p class="pro-options__title">
                             <img src="img/pro-gradient.svg" alt="" width="70" height="34">
                         </p>

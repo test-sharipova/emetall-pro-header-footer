@@ -17,9 +17,13 @@
         img {
             scale: 1.42;
         }
+        &-mobile {
+            display: none;
+        }
     }
     &__content {
         max-width: 596px;
+        
     }
     &__title {
         margin: 28px 0 0;
