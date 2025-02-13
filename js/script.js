@@ -85,4 +85,26 @@ function navigate(direction) {
 }
 
 //pro-options
+document.querySelectorAll('.navigation button').forEach(button => {
+    button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const targetElement = document.querySelector(targetId);
 
+        // Прокручиваем контейнер к целевому элементу
+        const container = document.querySelector('.pro-options__wrapper');
+        const scrollToPosition = targetElement.offsetLeft;
+
+        container.scrollTo({
+            left: scrollToPosition,
+            behavior: 'smooth' // Плавная прокрутка
+        });
+
+        // Удаляем класс active у всех кнопок
+        document.querySelectorAll('.navigation button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Добавляем класс active к текущей кнопке
+        this.classList.add('active');
+    });
+});

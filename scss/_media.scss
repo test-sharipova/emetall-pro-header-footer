@@ -186,9 +186,7 @@
             margin-top: 30px;
         }
     }
-    html {
-        scroll-behavior: smooth;
-    }
+    
     .pro-options {
         .pro-title {
             text-align: center;
@@ -196,13 +194,14 @@
         scroll-behavior: smooth;
         padding: 65px 0 30px;
         &__wrapper {
-            // grid-template-columns: 1fr;
+            
             gap: 16px;
             display: flex;
             align-items: stretch;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             padding-right: 16px;
+            scroll-behavior: smooth;
         }
         &__item:first-child, &__item:nth-child(3) {
             border-radius: 12px;
@@ -212,21 +211,49 @@
             min-height: auto;
             min-width: calc(100vw - 64px);
             scroll-snap-align: start;
-            scroll-margin-top: calc(9rem + 75px);
-            &-accent {
-                order: 1;
-            }
-            &:first-child {
-                order: 2;
-            }
-            &:nth-child(3) {
-                order: 3;
-            }
+            
+            // &-accent {
+            //     order: 1;
+            // }
+            // &:first-child {
+            //     order: 2;
+            // }
+            // &:nth-child(3) {
+            //     order: 3;
+            // }
         }
         &__nav {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
+            border-radius: 8px;
+            background: rgba(242, 242, 244, .1);
+            padding: 4px 0;
+            min-height: 46px;
+            width: fit-content;
+            margin: 16px auto 24px;
+            &-link {
+                border: none;
+                background: transparent;
+                font-weight: 400;
+                font-size: 14px;
+                color: #fff;
+                text-decoration: none;
+                cursor: pointer;
+                padding: 6px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 100%;
+                border-radius: 6px;
+                // scroll-margin-top: -40px;
+                &.active {
+                    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+                    background: #fff;
+                    
+                    color: #212529;
+                }
+            }
         }
     }
     .pro-faq {

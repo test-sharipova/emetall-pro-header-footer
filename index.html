@@ -258,15 +258,18 @@
             </div>
         </section>
         <section class="pro-options">
-            <div class="container container_pr0">
+            <div class="container">
                 <h2 class="pro-title">
                     Варианты подписок
                 </h2>
-                <!-- <div class="pro-options__nav">
-                    <a href="#pro" class="pro-options__nav-link">Про</a>
-                    <a href="#proplus" class="pro-options__nav-link">Про плюс</a>
-                    <a href="#none" class="pro-options__nav-link">без</a>
-                </div> -->
+                <div class="pro-options__nav navigation">
+                    <button type="button" class="pro-options__nav-link" data-target="#none">Без подписки</button>
+                    <button type="button" class="pro-options__nav-link active" data-target="#pro">Pro</button>
+                    <button type="button" class="pro-options__nav-link" data-target="#proplus">Pro+</button>
+                </div>
+            </div>
+            <div class="container container_pr0">
+                
                 <ul class="pro-options__wrapper">
                     <li class="pro-options__item" id="none">
                         <p class="pro-options__title">
