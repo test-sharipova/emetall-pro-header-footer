@@ -13,7 +13,14 @@
         
     }
     .pro-wins__text {
-        margin-top: 24px;
+        margin-top: 0;
+        max-width: 388px;
+        font-size: 32px;
+    }
+    .pro-wins__subtext {
+        margin-top: 17px;
+        max-width: 314px;
+        color: #fff;
     }
     
     &__num {
@@ -42,5 +49,176 @@
             align-items: center;
         }
     }
-    
+    //слайдер
+    &__slider {
+        margin-top: 8px;
+        padding-top: 36px;
+        padding-left: 28px;
+        display: flex;
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+  
+  
+    //   .mySwiper2 .swiper-slide-thumb-active {
+    //     opacity: 1;
+    //   }
+    //   .mySwiper2 {
+    //     .swiper-slide {
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+    //     }
+    //   }
+    //   .swiper-slide img {
+    //     display: block;
+    //     width: 300px;
+    //     height: 300px;
+    //     object-fit: cover;
+    //   }
+    //   .mySwiper2 {
+    //     width: 50%;
+    //     height: 700px;
+    //   }
+    //   .mySwiper {
+    //     width: 50%;
+    //     height: 700px;
+    //     .swiper-slide {
+    //         opacity: .4;
+    //         padding: 32px;
+    //         position: relative;
+    //         &:before {
+    //             content: '';
+    //             display: block;
+    //             position: absolute;
+    //             top: 0;
+    //             left: 0;
+    //             width: 3px;
+    //             height: 100%;
+    //             background-color: #fff;
+    //             transition: opacity 1s;
+    //             opacity: 0;
+    //         }
+            
+    //         &-active {
+    //             opacity: 1;
+    //             &:before {
+    //                 opacity: 1;
+    //             }
+                
+    //         }
+    //     }
+    //   }
+    .slider-nav {
+        padding: 30px 0;
+        // height: 476px;
+        .slick-slide {
+            opacity: .4;
+            padding: 16px 0 15px 96px;
+            position: relative;
+            height: 270px;
+            border: none;
+            
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3px;
+                height: 100%;
+                background-color: #fff;
+                transition: opacity 1s;
+                opacity: .4;
+            }
+        }
+        .slick-current {
+            opacity: 1;
+                &:before {
+                    opacity: 1;
+                }
+            
+           
+        }
+    }
+    .slider-for {
+        &__img {
+            border-radius: 12px;
+            width: 433px;
+            height: auto;
+            backdrop-filter: blur(60px);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 32px;
+            position: absolute;
+            top: 42px;
+            left: 94px;
+            &-bg {
+                top: 31px;
+                right: 37px;
+                position: relative;
+                opacity: 0;
+                transform: scale(0);
+                transition: opacity 1s, transform 1s;
+                transition-delay: .1s;
+            }
+            &-wrap {
+                display: flex;
+                gap: 23px;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        .slick-slide {
+            position: relative;
+            
+            &:nth-child(1) {
+                .slider-for__img {
+                    top: 0;
+                    left: 0;
+                    left: auto;
+                    position: relative;
+                    width: 343px;
+                    height: 343px;
+                    padding: 20px;
+                    img {
+                        max-width: 100%;
+                    }
+                    &-bg {
+                        left: -36px;
+                        right: auto;
+                        top: 47px;
+                    }
+                    &-wrap {
+                        top: 10px;
+                        left: 97px;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                .slider-for__img {
+                    background: none;
+                    backdrop-filter: blur(0px);
+                    top: 79px;
+                    right: 0;
+                    left: auto;
+                    width: auto;
+                    &-bg {
+                        left: -71px;
+                        top: 0;
+                        right: auto;
+                    }
+                }
+            }
+        }
+        .slick-active {
+            .slider-for__img-bg {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+    }
 }

@@ -108,3 +108,127 @@ document.querySelectorAll('.navigation button').forEach(button => {
         this.classList.add('active');
     });
 });
+
+//slider
+// var swiper = new Swiper(".mySwiper", {
+//     loop: true,
+//     spaceBetween: 10,
+//     slidesPerView: 1,
+//     freeMode: true,
+//     watchSlidesProgress: true,
+//     loop: true,
+//     direction: "vertical",
+//     effect: "fade",
+//   });
+//   var swiper2 = new Swiper(".mySwiper2", {
+//     loop: true,
+//     spaceBetween: 10,
+//     mousewheel: true,
+//     slidesPerView: 3,
+//     direction: "vertical",
+//     thumbs: {
+//       swiper: swiper,
+//     },
+//     loop: true,
+//   });
+
+//ВАРИАНТ 2
+
+// var swiper = new Swiper(".mySwiper", {
+//     spaceBetween: 10,
+//     slidesPerView: 3,
+//     // freeMode: true,
+//     watchSlidesProgress: true,
+//     direction: "vertical",
+//     mousewheel: true,
+//     loop: true,
+    
+//   });
+//   var swiper2 = new Swiper(".mySwiper2", {
+//     spaceBetween: 10,
+//     direction: "vertical",
+//     loop: true,
+//     mousewheel: true,
+//     slidesPerView: 1,
+//     thumbs: {
+//       swiper: swiper,
+//     },
+//   });
+//   // Получаем все элементы с классом swiper-slide
+//   const slides = document.querySelectorAll('.swiper-slide');
+
+//   // Добавляем обработчик события клика для каждого слайда
+//   slides.forEach(slide => {
+//       slide.addEventListener('click', function() {
+//           // Удаляем класс swiper-slide-active у всех слайдов
+//           slides.forEach(s => s.classList.remove('swiper-slide-active'));
+          
+//           // Добавляем класс swiper-slide-active к текущему слайду
+//           this.classList.add('swiper-slide-active');
+//       });
+//   });
+
+  
+
+// // Функция для обновления классов
+// function updateActiveThumbClass() {
+//     const slides = document.querySelectorAll('.swiper-slide');
+    
+//     slides.forEach(slide => {
+//         // Удаляем класс thumb-active у всех слайдов
+//         slide.classList.remove('swiper-slide-thumb-active');
+//     });
+
+//     // Находим активный слайд и добавляем ему класс thumb-active
+//     const activeSlideIndex = swiper.activeIndex % slides.length; // Получаем индекс активного слайда
+//     const activeSlide = slides[activeSlideIndex];
+    
+//     if (activeSlide) {
+//         activeSlide.classList.add('swiper-slide-thumb-active');
+//     }
+// }
+
+// // Инициализируем проверку при загрузке страницы
+// updateActiveThumbClass();
+
+// // Отслеживаем изменения активности слайдов
+// swiper.on('slideChange', function () {
+//     updateActiveThumbClass();
+// });
+
+//ВАРИАНТ 3
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+    infinite: true,
+    adaptiveHeight: true,
+    speed: 400,
+    // vertical: true
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    // centerMode: true,
+    focusOnSelect: true,
+    verticalSwiping: true,
+    vertical: true,
+    arrows: false,
+    infinite: true,
+    centerPadding: '60px',
+    adaptiveHeight: true
+  });
+  const slider = $(".slider-nav");
+  slider.on('wheel', (function(e) {
+    e.preventDefault();
+  
+    if (e.originalEvent.deltaY < 0) {
+      $(this).slick('slickPrev');
+    } else {
+      $(this).slick('slickNext');
+    }
+  }));
