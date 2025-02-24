@@ -321,3 +321,8 @@ $('#slider-section').on('wheel', function(e) {
     }
 });
 
+//sms
+$('.pro-btn-code').on('click', function(){
+    $('#user-sms-code').fadeIn();
+})
+
