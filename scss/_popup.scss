@@ -140,3 +140,50 @@
     color: #212529;
     line-height: normal;
 }
+
+//Вы активировали бесплатный пробный период!
+.popup-activate {
+   
+    display: none;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+    padding: 48px 40px 60px;
+    text-align: center;
+    color: #212529;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(712px, 100%);
+    &__label {
+        font-weight: 600;
+        font-size: 16px;
+        color: #212529;
+        line-height: normal;
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    &__title {
+        margin-top: 48px;
+        font-weight: 600;
+        font-size: 24px;
+        text-align: center;
+        line-height: normal;
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 131%;
+        text-align: center;
+        margin-top: 12px;
+        max-width: 464px;
+        margin-inline: auto;
+    }
+    .pro-btn {
+        margin: 24px auto 0;
+        padding-inline: 44px;
+    }
+}

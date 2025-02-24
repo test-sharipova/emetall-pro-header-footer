@@ -84,12 +84,14 @@
     &__form {
         margin: 32px auto 0;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        max-width: 664px;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        
+        max-width: 320px;
         .pro-btn {
             grid-column: 1/-1;
             width: 100%;
+            margin-top: 16px;
         }
     }
     &__input {
@@ -150,6 +152,11 @@
             border: 1px solid #3473f4; 
             outline: 4px solid rgba(39, 100, 224, .4);
         }
+        &:not(:placeholder-shown) {
+            background: rgba(39, 100, 224, 0.25);
+            border: 1px solid #3473f4;
+            outline: none;
+        }
     }
     .policy {
         margin-top: 8px;
@@ -157,10 +164,14 @@
         font-size: 12px;
         line-height: 133%;
         color: #fff;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 12px;
+       text-align: center;
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            text-align: center;
+        }
+        
         a {
             color: #2764e0;
             text-decoration: none;
@@ -196,5 +207,84 @@
             background-size: 9px 6px;
 
         }
+    }
+    &__profile {
+        max-width: 320px;
+        margin: 32px auto 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        display: none;
+        &__item {
+            border-radius: 6px;
+            background-color: rgba(242, 242, 244, .1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            
+        }
+        &__wrap {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        &__user {
+            width: 54px;
+            height: 54px;
+            border-radius: 100%;
+            img {
+                max-width: 100%;
+                display: block;
+            }
+        }
+        &__name {
+            span {
+                display: block;
+            }
+            span:nth-child(1) {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 131%;
+                text-align: center;
+                color: #fff;
+            }
+            span:nth-child(2) {
+                font-weight: 400;
+                font-size: 14px;
+                color: #6c757d;
+                margin-top: 4px;
+            }
+        }
+        &__info {
+            font-weight: 400;
+            font-size: 15px;
+            color: #6c757d;
+            line-height: normal;
+        }
+        &__content {
+            font-weight: 400;
+            font-size: 15px;
+            text-align: right;
+            color: #fff;
+            line-height: normal;
+        }
+        .pro-btn {
+            width: 100%;
+            margin-top: 12px;
+        }
+        
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: #3473f4;
+        background: none;
+        border: none;
+        text-decoration: none;
+        display: block;
+        margin-top: 12px;
     }
 }

@@ -203,7 +203,7 @@ $('.slider-for').slick({
     arrows: false,
     fade: true,
     asNavFor: '.slider-nav',
-    infinite: true,
+    infinite: false,
     adaptiveHeight: true,
     speed: 400,
     // vertical: true
@@ -218,7 +218,7 @@ $('.slider-for').slick({
     verticalSwiping: true,
     vertical: true,
     arrows: false,
-    infinite: true,
+    infinite: false,
     centerPadding: '60px',
     adaptiveHeight: true
   });
@@ -232,3 +232,92 @@ $('.slider-for').slick({
       $(this).slick('slickNext');
     }
   }));
+
+// Инициализация слайдера
+// $('.slider').slick({
+//     infinite: false, // чтобы слайды не циклились
+//     slidesToShow: 1,
+//     slidesToScroll: 1
+// });
+
+// let scrollAllowed = false;
+
+// // Проверяем, когда секция с слайдером в области видимости
+// $(window).on('scroll', function() {
+//     let sectionOffset = $('#slider-section').offset().top;
+//     let scrollPosition = $(window).scrollTop();
+//     let windowHeight = $(window).height();
+
+//     // Если слайдер в области видимости, активируем прокрутку слайдов
+//     if (scrollPosition + windowHeight > sectionOffset && scrollPosition < sectionOffset + $('#slider-section').outerHeight()) {
+//         scrollAllowed = true;
+
+//     } else {
+//         scrollAllowed = false;
+//     }
+// });
+
+// // Перехватываем прокрутку колесика мыши внутри слайдера
+// $('#slider-section').on('wheel', function(e) {
+//     if (scrollAllowed) {
+//         e.preventDefault();
+
+//         // Если прокрутка вниз, переходим к следующему слайду
+//         if (e.originalEvent.deltaY > 0) {
+//             $('.slider-nav').slick('slickNext');
+//         }
+//         // Если прокрутка вверх, возвращаемся на предыдущий слайд
+//         else {
+//             $('.slider-nav').slick('slickPrev');
+//         }
+
+//         // Проверка, если слайды закончились, прокручиваем страницу дальше
+//         let slickIndex = $('.slider-nav').slick('slickCurrentSlide');
+//         let totalSlides = $('.slider-nav').slick('getSlick').slideCount;
+        
+//         if (slickIndex === totalSlides - 1 || slickIndex === 0) {
+//             scrollAllowed = false;
+//         }
+//     }
+// });
+
+let scrollAllowed = false;
+
+// Проверяем, когда секция с слайдером в области видимости
+$(window).on('scroll', function() {
+    let sectionOffset = $('#slider-section').offset().top;
+    let scrollPosition = $(window).scrollTop();
+    let windowHeight = $(window).height();
+
+    // Если верхняя часть слайдера в области видимости (top top), активируем прокрутку слайдов
+    if (scrollPosition >= sectionOffset && scrollPosition < sectionOffset + $('#slider-section').outerHeight()) {
+        scrollAllowed = true;
+    } else {
+        scrollAllowed = false;
+    }
+});
+
+// Перехватываем прокрутку колесика мыши внутри слайдера
+$('#slider-section').on('wheel', function(e) {
+    if (scrollAllowed) {
+        e.preventDefault();
+
+        // Если прокрутка вниз, переходим к следующему слайду
+        if (e.originalEvent.deltaY > 0) {
+            $('.slider-nav').slick('slickNext');
+        }
+        // Если прокрутка вверх, возвращаемся на предыдущий слайд
+        else {
+            $('.slider-nav').slick('slickPrev');
+        }
+
+        // Проверка, если слайды закончились, прокручиваем страницу дальше
+        let slickIndex = $('.slider-nav').slick('slickCurrentSlide');
+        let totalSlides = $('.slider-nav').slick('getSlick').slideCount;
+        
+        if (slickIndex === totalSlides - 1 || slickIndex === 0) {
+            scrollAllowed = false;
+        }
+    }
+});
+
