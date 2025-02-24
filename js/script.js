@@ -324,5 +324,9 @@ $('#slider-section').on('wheel', function(e) {
 //sms
 $('.pro-btn-code').on('click', function(){
     $('#user-sms-code').fadeIn();
+});
+
+$('.popup-activate .popup-close').on('click', function(){
+    $('.popup-activate, .popup-activate-overlay').fadeOut();
 })
 
